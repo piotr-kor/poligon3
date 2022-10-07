@@ -10,8 +10,8 @@ function menu_from_db($connection){
 	return $menu;
    }
    
-function podstrona_from_db($connection,$id){	
-	$zapytanie = "SELECT tresc FROM podstrony WHERE id='".$id."'";
+function podstrona_from_db($connection,$id=1,$nazwa_kolumny="tresc"){	
+	$zapytanie = "SELECT ".$nazwa_kolumny." FROM podstrony WHERE id='".$id."'";
 	if ($result = $connection -> query($zapytanie)) {
 		while ($wiersz = $result -> fetch_row()) {
 			$podstrona = $wiersz[0];
@@ -20,4 +20,9 @@ function podstrona_from_db($connection,$id){
 		}
 	return $podstrona;
    }
+function get_id(){	
+	if(isset($_GET['id'])){
+		return $_GET['id'];}
+	else {return 1;}
+	} 
 ?>
