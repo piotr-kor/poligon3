@@ -46,7 +46,7 @@ include ('include.php');
 		</div>
 		<footer>
 			<div> pk.sth © 2022</div>
-			<div>Strona o niczym by PK przygotowane specjalnie dla 1pt. Lorem ipsum dolor sit amet, consectetur adipiscing elit. </div>
+			<div>Strona o niczym by PK przygotowane specjalnie dla twardzieli z ZSZ. Lorem ipsum dolor sit amet, consectetur adipiscing elit. </div>
 		</footer>
 	</div>
 </body>
