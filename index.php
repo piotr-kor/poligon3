@@ -22,6 +22,8 @@ include ('include.php');
 				<h2><?php echo podstrona_from_db($polaczenie,get_id(),"nazwapodstr"); ?></h2>
 					<p>
 					<?php echo podstrona_from_db($polaczenie,get_id(),"tresc"); ?>
+					<?php echo substr(podstrona_from_db($polaczenie,get_id(),"czasutworz"),0,10); ?>
+					
 					</p>
 				</article>
 				<article>
