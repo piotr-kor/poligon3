@@ -1,4 +1,5 @@
 <?php
+session_start();
 include ('db_config.php');
 include ('include.php');
 ?>
@@ -19,10 +20,12 @@ include ('include.php');
 		<div>
 			<main>
 				<article>
-				<h2><?php echo podstrona_from_db($polaczenie,get_id(),"nazwapodstr"); ?></h2>
+				<h2>
+				<?php echo podstrona_czy_panel_czy_tytul ($polaczenie,get_id(),"nazwapodstr") ?>
+				</h2>
 					<p>
-					<?php echo podstrona_from_db($polaczenie,get_id(),"tresc"); ?>
-					<?php echo substr(podstrona_from_db($polaczenie,get_id(),"czasutworz"),0,10); ?>
+					<?php echo podstrona_czy_panel_czy_tytul ($polaczenie,get_id(),"tresc") ?>
+					<?php //echo podstrona_czy_panel(substr(podstrona_from_db($polaczenie,get_id(),"czasutworz"),0,10)); ?>
 					
 					</p>
 				</article>
@@ -32,13 +35,18 @@ include ('include.php');
 				</article>
 			</main>
 			<aside>
+				<section>
+					<h3>Bezpieczeństwo</h3>
+					<?php echo login_form();
+					login_action($polaczenie);?>
+				</section>
 				<nav>
 					<h3>Menu</h3>
 					<?php echo menu_from_db($polaczenie); ?>
 				</nav>
 				<section>
-					<h3>Reklamy</h3>
-					<p>Lorem ipsum dolor sit emet...</p>
+					<h3>Menu opcji</h3>
+					<?php echo may_i_show('<a href="index.php?id=panel&a=add_podstr"><input type="button" value="Dodaj podstronę"></a>') ;?>
 				</section>
 				<section>
 					<h3>Social media</h3>
