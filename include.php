@@ -3,7 +3,7 @@ function menu_from_db($connection){
 	$menu = '';	
 	if ($result = $connection -> query("SELECT * FROM podstrony")) {
 		while($wiersz = mysqli_fetch_assoc($result)){
-                $menu = $menu.$wiersz['nazwapodstr']."<br>";
+                $menu = $menu.'<a href="index.php?id='.$wiersz['id'].'">'.$wiersz['nazwapodstr'].'</a><br>';
                 }
 		$result -> free_result();
 		}
