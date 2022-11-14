@@ -18,7 +18,10 @@ include ('include.php');
 			<main>
 				<article>
 				<h2>Dostępne funkcje</h2>
-					
+					<ol>
+						<li><a href="delete.php"> Usuwanie podstron</a></li>
+						<li></li>
+					</ol>
 				</article>
 				
 			</main>
