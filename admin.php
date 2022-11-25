@@ -20,7 +20,7 @@ include ('include.php');
 				<h2>Dostępne funkcje</h2>
 					<ol>
 						<li><a href="delete.php"> Usuwanie podstron</a></li>
-						<li></li>
+						<li><a href="mod0.php"> Modyfikacja podstron</a></li>
 					</ol>
 				</article>
 				
